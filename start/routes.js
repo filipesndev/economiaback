@@ -17,5 +17,10 @@
 const Route = use('Route')
 
 Route.get('/', () => {
-  return { greeting: 'Hello world in JSON' }
+  return { message: 'API executando ...' }
 })
+
+Route.resource('/users', 'UserController').apiOnly()
+
+Route.post('/auth/login', 'UserController.login')
+Route.post('/auth/profile', 'UserController.profile')
