@@ -21,6 +21,8 @@ Route.get('/', () => {
 })
 
 Route.resource('/users', 'UserController').apiOnly()
+Route.resource('/tipos-documentos', 'TipoDocumentoController').apiOnly()
+Route.resource('/grupos-despesas', 'GrupoDespesaController').apiOnly()
 
 Route.post('/auth/login', 'UserController.login')
 Route.post('/auth/profile', 'UserController.profile')
